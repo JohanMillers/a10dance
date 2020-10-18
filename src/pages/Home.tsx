@@ -1,6 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonRouterLink } from '@ionic/react';
 import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -8,16 +7,24 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>@10Dance Home</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+      <IonContent>
+        <IonCard>
+          <img src='assets/classroom.jpg' alt="Classroom"/>
+        </IonCard>
+        <IonCardHeader>
+          <IonCardSubtitle> Attandance Manager </IonCardSubtitle>
+          <IonCardTitle>@10Dance</IonCardTitle>
+        </IonCardHeader>
+        <IonCardContent>
+          <p>
+            @10Dance is an attendance application originally designed to help Sunday School teachers keep track of the students in their classes
+          </p>
+          <IonRouterLink routerLink="/roster" routerDirection="forward">Roster
+          </IonRouterLink>
+        </IonCardContent>
       </IonContent>
     </IonPage>
   );
